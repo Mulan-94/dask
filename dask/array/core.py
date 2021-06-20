@@ -4575,7 +4575,7 @@ def chunks_from_arrays(arrays):
 
     def shape(x):
         try:
-            return x.shape
+            return x.shape if x.shape != () else (1,)
         except AttributeError:
             return (1,)
 
